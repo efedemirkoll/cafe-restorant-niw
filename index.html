@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>asd</title>
+</head>
+
+<body>
+    <!-- header başlangıç -->
+    <header>
+        <a href="#" class="logo"><img src="/img/logo.png" alt=""></a>
+        <nav class="navbar">
+            <a href="home" class="active">home</a>
+            <a href="abaut">abaut</a>
+            <a href="menu">menü</a>
+            <a href="team">team</a>
+            <a href="reservation">reservation</a>
+            <a href="blog">blog</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    <!-- header bitiş -->
+
+    <!-- kaydırıcı bölüm başlangıcı -->
+    <div class="home" id="home" >
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide slide1">
+                    <div class="content">
+                        <img src="/img/crown-symbol.png" alt="">
+                        <h3>lezzetli royate</h3>
+                        <h1>hediye çeki</h1>
+                        <p>sevgili müşterilerini dağıt</p>
+                        <a href="#" class="btn">şimdi sipariş ver</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide slide2">
+                    <div class="content">
+                        <img src="/img/crown-symbol.png" alt="">
+                        <h3>Bu yemeğin %10 satışı</h3>
+                        <h1>taze</h1>
+                        <p>yemek restoranı</p>
+                        <a href="#" class="btn">şimdi sipariş ver</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide slide3">
+                    <div class="content">
+                        <img src="/img/crown-symbol.png" alt="">
+                        <h3>Açığız</h3>
+                        <h1>hediye çeki</h1>
+                        <p>taze meyveler</p>
+                        <a href="#" class="btn">şimdi sipariş ver</a>
+                    </div>
+                </div>
+            </div>
+                <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- kaydırıcı bölüm bitiş -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".home-slider", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop:true,
+    });
+  </script>
+    <script type="text/javascript">
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
