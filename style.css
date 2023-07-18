@@ -257,6 +257,99 @@ section {
 
 /* Welcome style end */
 
+/* menü style başlangıç */
+.our-menu {
+    background: url(/img/our-menu-bg-1.png)left top no-repeat, url(/img/our-menu-bg-3.jpg);
+
+}
+
+.our-menu .menu-container {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 2fr));
+    gap: 5rem 10rem;
+}
+
+.our-menu .menu-container .item .item-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+}
+
+.our-menu .menu-container .item .menu-item {
+    padding: 5rem 0;
+}
+
+.our-menu .menu-container .item .item-name h2 {
+    font-size: 3rem;
+    color: #e5e5e5;
+    font-weight: 300;
+}
+
+.our-menu .menu-container .item .item-menu h3 {
+    font-size: 2rem;
+    color: #e5e5e5;
+    font-weight: 200;
+    display: inline-block;
+}
+
+.our-menu .menu-container .item .item-menu span {
+    width: 37%;
+    display: inline-block;
+    border: 1px dotted #e5e5e5;
+}
+
+.our-menu .menu-container .item .item-menu ul {
+    display: flex;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: .8rem 0;
+    font-weight: 200;
+}
+
+.our-menu .menu-container .item .item-menu ul li a {
+    color: #b9b9b9;
+}
+
+/* menü style bitiş */
+
+
+/* şeflerimizin style başlangıç */
+.our-chef {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.our-chef .item .image img {
+    width: 100%;
+}
+
+.our-chef .item {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.our-chef .item:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0; left: 0;right: 0;bottom:0 ;
+    background: rgb(0, 0, 0, .5);
+    z-index: 5;
+}
+
+.our-chef .item:hover.item:before{
+    display: block;
+}
+
+/* şeflerimizin style bitiş */
+
 
 /* media başlaşgıç */
 @media(max-width: 991px) {
@@ -271,7 +364,12 @@ section {
     header .logo img {
         height: 7rem;
     }
+
+    .our-menu .menu-container {
+        grid-template-columns: repeat(auto-fit, minmax(30rem.2fr));
+    }
 }
+
 
 @media(max-width: 768px) {
     header .logo img {
@@ -329,7 +427,7 @@ section {
         flex-wrap: wrap;
     }
 
-    .welcome .box-container .box{
+    .welcome .box-container .box {
         width: 100%;
     }
 }
