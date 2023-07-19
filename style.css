@@ -375,6 +375,10 @@ section {
     header .logo img {
         height: 7rem;
     }
+    html {
+        font-size: 30%;
+    }
+
 
     header .icons #menu {
         display: inline-block;
